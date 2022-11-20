@@ -5,6 +5,6 @@ const router = express.Router()
 const editController = require('../controllers/edit')
 
 router.get('/remove/:id', editController.deleteTicket)
-router.post('/:id', editController.updateTask)
+router.get('/:id', editController.updateTicket)
 
 module.exports = router

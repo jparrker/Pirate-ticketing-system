@@ -8,13 +8,13 @@ module.exports = {
             res.redirect("/");
         });
     },
-    updateTask: (req, res) => {
+    updateTicket: (req, res) => {
         const id = req.params.id;
         TicketList.findByIdAndUpdate(
             id,
             {
-                title: req.body.title,
-                content: req.body.content
+                status: 'Closed'
+
             },
             err => {
                 if (err) return res.status(500).send(err);
